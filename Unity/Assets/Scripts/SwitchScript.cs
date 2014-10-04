@@ -20,7 +20,6 @@ public class SwitchScript : MonoBehaviour
 	
 		void OnTriggerEnter2D (Collider2D c)
 		{
-				print ("test");
 				if (c.transform.tag == "Player") {
 						door.GetComponent<DoorScript> ().openDoor ();
 				}
