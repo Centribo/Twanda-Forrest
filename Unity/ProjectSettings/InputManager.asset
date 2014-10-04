@@ -5,45 +5,77 @@ InputManager:
   m_ObjectHideFlags: 0
   m_Axes:
   - serializedVersion: 3
-    m_Name: leftKey
+    m_Name: PlayerOneLeftKey
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: a
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0
+    sensitivity: 0
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: PlayerOneRightKey
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: d
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0
+    sensitivity: 0
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: PlayerTwoLeftKey
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: left
     altNegativeButton: 
-    altPositiveButton: a
+    altPositiveButton: 
     gravity: 0
     dead: 0
     sensitivity: 0
-    snap: 1
+    snap: 0
     invert: 0
     type: 0
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: rightKey
+    m_Name: PlayerTwoRightKey
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: right
     altNegativeButton: 
-    altPositiveButton: d
+    altPositiveButton: 
     gravity: 0
     dead: 0
     sensitivity: 0
-    snap: 1
+    snap: 0
     invert: 0
     type: 0
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: upKey
+    m_Name: JumpKey
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: up
+    positiveButton: space
     altNegativeButton: 
-    altPositiveButton: w
+    altPositiveButton: 
     gravity: 0
     dead: 0
     sensitivity: 0
