@@ -18,14 +18,15 @@ public class SwitchScript : MonoBehaviour
 		
 		}
 	
-		void OnCollisionEnter2D (Collision2D c)
+		void OnTriggerEnter2D (Collider2D c)
 		{
+				print ("test");
 				if (c.transform.tag == "Player") {
 						door.GetComponent<DoorScript> ().openDoor ();
 				}
 		}
 	
-		void OnCollisionExit2D (Collision2D c)
+		void OnTriggerExit2D (Collider2D c)
 		{
 				if (c.transform.tag == "Player") {
 						door.GetComponent<DoorScript> ().closeDoor ();
