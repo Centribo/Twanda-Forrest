@@ -8,7 +8,8 @@ public class DoorScript : MonoBehaviour
 		Vector3 closedPos;
 		Vector3 openedPos;
 		public int openDoorDelta;
-	
+		public bool isGate = false;
+
 		// Use this for initialization
 		void Start ()
 		{
@@ -25,9 +26,11 @@ public class DoorScript : MonoBehaviour
 								this.transform.position = openedPos;
 						}
 				} else {
-						this.transform.position = this.transform.position + new Vector3 (0, -0.1f, 0);
-						if (this.transform.position.y < closedPos.y) {
-								this.transform.position = closedPos;
+						if (!isGate) {
+								this.transform.position = this.transform.position + new Vector3 (0, -0.1f, 0);
+								if (this.transform.position.y < closedPos.y) {
+										this.transform.position = closedPos;
+								}
 						}
 				}
 		}
