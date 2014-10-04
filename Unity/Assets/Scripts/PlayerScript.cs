@@ -62,7 +62,7 @@ public class PlayerScript : MonoBehaviour
 	
 		void OnCollisionEnter2D (Collision2D c)
 		{
-				if (c.transform.tag == "Platform") {
+				if (c.transform.tag == "Platform" || c.transform.tag == "Door") {
 						isOnGround = true;
 				}
 		}
