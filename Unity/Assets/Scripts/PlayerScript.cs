@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
 				
 				float distance = (this.GetComponent<BoxCollider2D> ().size.y * 0.5f * this.transform.localScale.x) + 0.016f;
 				Collider2D hit = Physics2D.OverlapPoint (new Vector2 (this.transform.position.x, this.transform.position.y - distance));
-				if (hit.transform.tag == "Platform" || hit.transform.name == "floor") {
+				if (hit.transform.tag == "Platform" || hit.transform.name == "floor" || hit.transform.tag == "Door") {
 						this.isOnGround = true;
 				} else {
 						this.isOnGround = false;
