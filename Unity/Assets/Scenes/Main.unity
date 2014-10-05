@@ -16707,6 +16707,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 16cdd96a94a1ae44aba50b4050927b94, type: 3}
   - {fileID: 21300000, guid: be388a9152078da4db7587526a94a60b, type: 3}
   - {fileID: 21300000, guid: 046356ac1c3e03049a85cafcca7eea41, type: 3}
+  idlingRightSprites: []
+  idlingLeftSprites: []
   framesPerSecond: 13
 --- !u!61 &292011697
 BoxCollider2D:
@@ -28833,6 +28835,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
+      propertyPath: idlingSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
       propertyPath: walkingSprites.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -28952,6 +28958,16 @@ Prefab:
       propertyPath: walkingLeftSprites.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: 046356ac1c3e03049a85cafcca7eea41,
+        type: 3}
+    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
+      propertyPath: idlingSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ab67762e15e8d64e974079d0abaa150,
+        type: 3}
+    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
+      propertyPath: idlingSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c4dca2a19ec73343ade376a68f03443,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 032190594f211934284a9888257c50f5, type: 2}
@@ -108988,6 +109004,8 @@ MonoBehaviour:
   playerNumber: 2
   walkingRightSprites: []
   walkingLeftSprites: []
+  idlingRightSprites: []
+  idlingLeftSprites: []
   framesPerSecond: 0
 --- !u!61 &1936367790
 BoxCollider2D:
