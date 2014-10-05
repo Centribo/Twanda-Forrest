@@ -10,15 +10,22 @@ public class PlayerScript : MonoBehaviour
 		public int jumpForce = 70;
 		private bool isOnGround = false;
 		public int playerNumber = 0;
-	
+		public Sprite[] walkingRightSprites;
+		public Sprite[] walkingLeftSprites;
+		private SpriteRenderer spriteRenderer;
+		public float framesPerSecond;
+		int direction = 0; //-1 left, 0 stand, 1 right
+
 		// Use this for initialization
 		void Start ()
 		{
+				spriteRenderer = renderer as SpriteRenderer;
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
+				animate ();
 				bool jump = Input.GetButton ("JumpKey");
 
 				switch (playerNumber) {
@@ -28,10 +35,11 @@ public class PlayerScript : MonoBehaviour
 			
 						if (playerOneRight) {
 								//this.transform.Translate (Vector2.right * speed * Time.deltaTime);
-								this.rigidbody2D.AddForce (Vector2.right * acceleration);
+								moveRight ();
+								
 						} else if (playerOneLeft) {
 								//this.transform.Translate (-Vector2.right * speed * Time.deltaTime);
-								this.rigidbody2D.AddForce (Vector2.right * -acceleration);
+								moveLeft ();
 						}
 						break;
 				case 2:
@@ -40,10 +48,10 @@ public class PlayerScript : MonoBehaviour
 			
 						if (playerTwoRight) {
 								//this.transform.Translate (Vector2.right * speed * Time.deltaTime);
-								this.rigidbody2D.AddForce (Vector2.right * acceleration);
+								moveRight ();
 						} else if (playerTwoLeft) {
 								//this.transform.Translate (-Vector2.right * speed * Time.deltaTime);
-								this.rigidbody2D.AddForce (Vector2.right * -acceleration);
+								moveLeft ();
 						}
 						break;
 				}
@@ -80,7 +88,31 @@ public class PlayerScript : MonoBehaviour
 						this.isOnGround = false;
 				}
 		}
-	
+
+		void moveRight ()
+		{
+				this.rigidbody2D.AddForce (Vector2.right * acceleration);
+				direction = 1;
+		}
+
+		void moveLeft ()
+		{
+				this.rigidbody2D.AddForce (Vector2.right * -acceleration);
+				direction = -1;
+		}
+
+		void animate ()
+		{
+				if (direction == 1) {
+						int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
+						index = index % walkingRightSprites.Length;
+						spriteRenderer.sprite = walkingRightSprites [index];
+				} else if (direction == -1) {
+						int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
+						index = index % walkingLeftSprites.Length;
+						spriteRenderer.sprite = walkingLeftSprites [index];
+				}
+		}
 		
 }
 	
