@@ -16697,22 +16697,6 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 300
   playerNumber: 1
-<<<<<<< HEAD
-  walkingRightSprites:
-  - {fileID: 21300000, guid: 5a7c9e48fc413e442b83eaa2ae369414, type: 3}
-  - {fileID: 21300000, guid: da3e82b7b4b5dc546be9c010903a716c, type: 3}
-  - {fileID: 21300000, guid: a801d5720289b7742a595931af58dd8b, type: 3}
-  - {fileID: 21300000, guid: d9f51eb3dc3efad4b83b7268b9aaa280, type: 3}
-  walkingLeftSprites:
-  - {fileID: 21300000, guid: c3bbd4bf7ddc80447bd15ca7d9c1261b, type: 3}
-  - {fileID: 21300000, guid: 16cdd96a94a1ae44aba50b4050927b94, type: 3}
-  - {fileID: 21300000, guid: be388a9152078da4db7587526a94a60b, type: 3}
-  - {fileID: 21300000, guid: 046356ac1c3e03049a85cafcca7eea41, type: 3}
-  idlingRightSprites: []
-  idlingLeftSprites: []
-  framesPerSecond: 13
-=======
->>>>>>> origin/master
 --- !u!61 &292011697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16776,7 +16760,7 @@ Transform:
   m_Children:
   - {fileID: 33384365}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &292211415
 GameObject:
   m_ObjectHideFlags: 0
@@ -28837,25 +28821,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: idlingSprites.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingSprites.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingLeftSprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingRightSprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-=======
->>>>>>> origin/master
     - target: {fileID: 400002, guid: 032190594f211934284a9888257c50f5, type: 2}
       propertyPath: m_LocalPosition.x
       value: -7.25
@@ -28896,88 +28861,6 @@ Prefab:
       propertyPath: orthographic size
       value: 3
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingSprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: f9a4ef4399e4dd344ab91457972d2aa9,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300002, guid: f9a4ef4399e4dd344ab91457972d2aa9,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300004, guid: f9a4ef4399e4dd344ab91457972d2aa9,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingSprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300006, guid: f9a4ef4399e4dd344ab91457972d2aa9,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingSprites.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300008, guid: f9a4ef4399e4dd344ab91457972d2aa9,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: framesPerSecond
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingRightSprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 5a7c9e48fc413e442b83eaa2ae369414,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingRightSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: da3e82b7b4b5dc546be9c010903a716c,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingRightSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: a801d5720289b7742a595931af58dd8b,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingRightSprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: d9f51eb3dc3efad4b83b7268b9aaa280,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingLeftSprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: c3bbd4bf7ddc80447bd15ca7d9c1261b,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingLeftSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 16cdd96a94a1ae44aba50b4050927b94,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingLeftSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: be388a9152078da4db7587526a94a60b,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: walkingLeftSprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 046356ac1c3e03049a85cafcca7eea41,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: idlingSprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 0ab67762e15e8d64e974079d0abaa150,
-        type: 3}
-    - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
-      propertyPath: idlingSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 8c4dca2a19ec73343ade376a68f03443,
-        type: 3}
-=======
->>>>>>> origin/master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 032190594f211934284a9888257c50f5, type: 2}
   m_RootGameObject: {fileID: 292011695}
@@ -63238,7 +63121,7 @@ Transform:
   - {fileID: 21339824}
   - {fileID: 629681244}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1110497320
 GameObject:
   m_ObjectHideFlags: 0
@@ -109150,14 +109033,6 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 300
   playerNumber: 2
-<<<<<<< HEAD
-  walkingRightSprites: []
-  walkingLeftSprites: []
-  idlingRightSprites: []
-  idlingLeftSprites: []
-  framesPerSecond: 0
-=======
->>>>>>> origin/master
 --- !u!61 &1936367790
 BoxCollider2D:
   m_ObjectHideFlags: 0
