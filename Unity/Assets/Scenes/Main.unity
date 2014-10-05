@@ -2109,7 +2109,7 @@ Transform:
   - {fileID: 388143853}
   - {fileID: 3489968}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &35587044
 GameObject:
   m_ObjectHideFlags: 0
@@ -16697,6 +16697,7 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 300
   playerNumber: 1
+<<<<<<< HEAD
   walkingRightSprites:
   - {fileID: 21300000, guid: 5a7c9e48fc413e442b83eaa2ae369414, type: 3}
   - {fileID: 21300000, guid: da3e82b7b4b5dc546be9c010903a716c, type: 3}
@@ -16710,6 +16711,8 @@ MonoBehaviour:
   idlingRightSprites: []
   idlingLeftSprites: []
   framesPerSecond: 13
+=======
+>>>>>>> origin/master
 --- !u!61 &292011697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16773,7 +16776,7 @@ Transform:
   m_Children:
   - {fileID: 33384365}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
 --- !u!1 &292211415
 GameObject:
   m_ObjectHideFlags: 0
@@ -28834,6 +28837,7 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
       propertyPath: idlingSprites.Array.size
       value: 2
@@ -28850,6 +28854,8 @@ Prefab:
       propertyPath: walkingRightSprites.Array.size
       value: 4
       objectReference: {fileID: 0}
+=======
+>>>>>>> origin/master
     - target: {fileID: 400002, guid: 032190594f211934284a9888257c50f5, type: 2}
       propertyPath: m_LocalPosition.x
       value: -7.25
@@ -28880,7 +28886,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 032190594f211934284a9888257c50f5, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 032190594f211934284a9888257c50f5, type: 2}
       propertyPath: m_Name
@@ -28890,6 +28896,7 @@ Prefab:
       propertyPath: orthographic size
       value: 3
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 11400000, guid: 032190594f211934284a9888257c50f5, type: 2}
       propertyPath: walkingSprites.Array.data[0]
       value: 
@@ -28969,6 +28976,8 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 8c4dca2a19ec73343ade376a68f03443,
         type: 3}
+=======
+>>>>>>> origin/master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 032190594f211934284a9888257c50f5, type: 2}
   m_RootGameObject: {fileID: 292011695}
@@ -63185,7 +63194,7 @@ Transform:
   - {fileID: 21339824}
   - {fileID: 629681244}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1110497320
 GameObject:
   m_ObjectHideFlags: 0
@@ -77591,7 +77600,7 @@ Transform:
   - {fileID: 1401394947}
   - {fileID: 387797278}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1001 &1368528645
 Prefab:
   m_ObjectHideFlags: 0
@@ -109002,11 +109011,14 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 300
   playerNumber: 2
+<<<<<<< HEAD
   walkingRightSprites: []
   walkingLeftSprites: []
   idlingRightSprites: []
   idlingLeftSprites: []
   framesPerSecond: 0
+=======
+>>>>>>> origin/master
 --- !u!61 &1936367790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -109067,7 +109079,7 @@ Transform:
   m_Children:
   - {fileID: 1453822328}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1001 &1936621788
 Prefab:
   m_ObjectHideFlags: 0
