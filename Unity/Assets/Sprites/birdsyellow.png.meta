@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 67a8d3dab6d782e4e88423179b0e37e1
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: birdsyellow_0
+    21300002: birdsyellow_1
+    21300004: birdsyellow_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -24,14 +27,14 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +45,36 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: birdsyellow_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 8
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: birdsyellow_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 8
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: birdsyellow_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 8
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
