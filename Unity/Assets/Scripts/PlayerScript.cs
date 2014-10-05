@@ -17,16 +17,18 @@ public class PlayerScript : MonoBehaviour
 		private SpriteRenderer spriteRenderer;
 		public float framesPerSecond;
 		int direction = 0; //-1 left, 0 stand, 1 right
-		int lastDireciton = 0;
+		int lastDireciton = 1;
 
 		// Use this for initialization
 		void Start ()
 		{
+				spriteRenderer = renderer as SpriteRenderer;
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
+				animate ();
 				bool jump = Input.GetButton ("JumpKey");
 
 				switch (playerNumber) {
@@ -36,7 +38,7 @@ public class PlayerScript : MonoBehaviour
 			
 						if (playerOneRight) {
 								//this.transform.Translate (Vector2.right * speed * Time.deltaTime);
-								this.rigidbody2D.AddForce (Vector2.right * acceleration);
+								moveRight ();
 						} else if (playerOneLeft) {
 								//this.transform.Translate (-Vector2.right * speed * Time.deltaTime);
 
@@ -45,8 +47,6 @@ public class PlayerScript : MonoBehaviour
 								if (this.rigidbody2D.velocity.magnitude == 0) {
 										direction = 0;
 								}
-
-								this.rigidbody2D.AddForce (Vector2.right * -acceleration);
 
 						}
 
@@ -57,10 +57,15 @@ public class PlayerScript : MonoBehaviour
 			
 						if (playerTwoRight) {
 								//this.transform.Translate (Vector2.right * speed * Time.deltaTime);
-								this.rigidbody2D.AddForce (Vector2.right * acceleration);
+								moveRight ();
 						} else if (playerTwoLeft) {
 								//this.transform.Translate (-Vector2.right * speed * Time.deltaTime);
-								this.rigidbody2D.AddForce (Vector2.right * -acceleration);
+								moveLeft ();
+						} else {
+								if (this.rigidbody2D.velocity.magnitude == 0) {
+										direction = 0;
+								}
+				
 						}
 						break;
 				}
@@ -99,6 +104,7 @@ public class PlayerScript : MonoBehaviour
 						this.isOnGround = false;
 				}
 		}
+
 		void moveRight ()
 		{
 				this.rigidbody2D.AddForce (Vector2.right * acceleration);
