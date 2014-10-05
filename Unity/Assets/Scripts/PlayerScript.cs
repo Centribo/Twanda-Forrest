@@ -8,13 +8,12 @@ public class PlayerScript : MonoBehaviour
 		public int acceleration = 5;
 		public int maxSpeed = 5;
 		public int jumpForce = 70;
-		bool isOnGround = false;
+		private bool isOnGround = false;
 		public int playerNumber = 0;
 	
 		// Use this for initialization
 		void Start ()
 		{
-		
 		}
 	
 		// Update is called once per frame
@@ -54,16 +53,34 @@ public class PlayerScript : MonoBehaviour
 						this.rigidbody2D.velocity = new Vector2 (-maxSpeed, this.rigidbody2D.velocity.y);
 				}
 				
-				if (jump && isOnGround) {
+				float distance = (this.GetComponent<BoxCollider2D> ().size.y * 0.5f * this.transform.localScale.x) + 0.016f;
+				Collider2D hit = Physics2D.OverlapPoint (new Vector2 (this.transform.position.x, this.transform.position.y - distance));
+				if (hit.transform.tag == "Platform" || hit.transform.name == "floor") {
+						this.isOnGround = true;
+				} else {
+						this.isOnGround = false;
+				}
+				//print (hit.tag);
+				//Debug.DrawRay (new Vector3 (0, 0, 0), new Vector3 (this.transform.position.x, this.transform.position.y - distance, 0));
+				/* Vector2 origin = (Vector2)this.transform.position + (-Vector2.up * distance);
+				
+				RaycastHit2D hit = Physics2D.Raycast (origin, -Vector2.up, 0.01f);
+				Debug.DrawRay (origin, (-Vector2.up * 0.01f));
+
+				Debug.Log (hit.transform.tag);
+				if (hit.transform.tag == "Platform") {
+						this.isOnGround = true;
+				} else {
+						this.isOnGround = false;
+				} */
+
+				if (jump && this.isOnGround) {
+						this.transform.Translate (Vector2.up * 0.016f);
 						this.rigidbody2D.AddForce (new Vector2 (0, jumpForce));
-						isOnGround = false;
+						this.isOnGround = false;
 				}
 		}
 	
-		void OnCollisionEnter2D (Collision2D c)
-		{
-				if (c.transform.tag == "Platform" || c.transform.tag == "Door") {
-						isOnGround = true;
-				}
-		}
+		
 }
+	
