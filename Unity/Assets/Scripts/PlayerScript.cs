@@ -10,7 +10,19 @@ public class PlayerScript : MonoBehaviour
 		public int jumpForce = 70;
 		private bool isOnGround = false;
 		public int playerNumber = 0;
+<<<<<<< HEAD
+		public Sprite[] walkingRightSprites;
+		public Sprite[] walkingLeftSprites;
+		public Sprite[] idlingRightSprites;
+		public Sprite[] idlingLeftSprites;
+		private SpriteRenderer spriteRenderer;
+		public float framesPerSecond;
+		int direction = 0; //-1 left, 0 stand, 1 right
+		int lastDireciton = 0;
+
+=======
 	
+>>>>>>> origin/master
 		// Use this for initialization
 		void Start ()
 		{
@@ -31,8 +43,17 @@ public class PlayerScript : MonoBehaviour
 								this.rigidbody2D.AddForce (Vector2.right * acceleration);
 						} else if (playerOneLeft) {
 								//this.transform.Translate (-Vector2.right * speed * Time.deltaTime);
+<<<<<<< HEAD
+								moveLeft ();
+						} else {
+								if (this.rigidbody2D.velocity.magnitude == 0) {
+										direction = 0;
+								}
+=======
 								this.rigidbody2D.AddForce (Vector2.right * -acceleration);
+>>>>>>> origin/master
 						}
+
 						break;
 				case 2:
 						bool playerTwoLeft = Input.GetButton ("PlayerTwoLeftKey");
@@ -55,10 +76,12 @@ public class PlayerScript : MonoBehaviour
 				
 				float distance = (this.GetComponent<BoxCollider2D> ().size.y * 0.5f * this.transform.localScale.x) + 0.016f;
 				Collider2D hit = Physics2D.OverlapPoint (new Vector2 (this.transform.position.x, this.transform.position.y - distance));
-				if (hit.transform.tag == "Platform" || hit.transform.name == "floor" || hit.transform.tag == "Door") {
-						this.isOnGround = true;
-				} else {
-						this.isOnGround = false;
+				if (hit != null) {		
+						if (hit.transform.tag == "Platform" || hit.transform.name == "floor" || hit.transform.tag == "Door") {
+								this.isOnGround = true;
+						} else {
+								this.isOnGround = false;
+						}
 				}
 				//print (hit.tag);
 				//Debug.DrawRay (new Vector3 (0, 0, 0), new Vector3 (this.transform.position.x, this.transform.position.y - distance, 0));
@@ -80,7 +103,45 @@ public class PlayerScript : MonoBehaviour
 						this.isOnGround = false;
 				}
 		}
+<<<<<<< HEAD
+
+		void moveRight ()
+		{
+				this.rigidbody2D.AddForce (Vector2.right * acceleration);
+				direction = 1;
+				lastDireciton = 1;
+		}
+
+		void moveLeft ()
+		{
+				this.rigidbody2D.AddForce (Vector2.right * -acceleration);
+				direction = -1;
+				lastDireciton = -1;
+		}
+
+		void animate ()
+		{
+				if (direction == 1) {
+						int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
+						index = index % walkingRightSprites.Length;
+						spriteRenderer.sprite = walkingRightSprites [index];
+				} else if (direction == -1) {
+						int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
+						index = index % walkingLeftSprites.Length;
+						spriteRenderer.sprite = walkingLeftSprites [index];
+				} else if (direction == 0 && lastDireciton == 1) {
+						int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
+						index = index % idlingRightSprites.Length;
+						spriteRenderer.sprite = idlingRightSprites [index];
+				} else if (direction == 0 && lastDireciton == -1) {
+						int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
+						index = index % idlingLeftSprites.Length;
+						spriteRenderer.sprite = idlingLeftSprites [index];
+				}
+		}
+=======
 	
+>>>>>>> origin/master
 		
 }
 	
