@@ -10,7 +10,6 @@ public class PlayerScript : MonoBehaviour
 		public int jumpForce = 70;
 		private bool isOnGround = false;
 		public int playerNumber = 0;
-<<<<<<< HEAD
 		public Sprite[] walkingRightSprites;
 		public Sprite[] walkingLeftSprites;
 		public Sprite[] idlingRightSprites;
@@ -20,9 +19,6 @@ public class PlayerScript : MonoBehaviour
 		int direction = 0; //-1 left, 0 stand, 1 right
 		int lastDireciton = 0;
 
-=======
-	
->>>>>>> origin/master
 		// Use this for initialization
 		void Start ()
 		{
@@ -43,15 +39,15 @@ public class PlayerScript : MonoBehaviour
 								this.rigidbody2D.AddForce (Vector2.right * acceleration);
 						} else if (playerOneLeft) {
 								//this.transform.Translate (-Vector2.right * speed * Time.deltaTime);
-<<<<<<< HEAD
+
 								moveLeft ();
 						} else {
 								if (this.rigidbody2D.velocity.magnitude == 0) {
 										direction = 0;
 								}
-=======
+
 								this.rigidbody2D.AddForce (Vector2.right * -acceleration);
->>>>>>> origin/master
+
 						}
 
 						break;
@@ -103,8 +99,6 @@ public class PlayerScript : MonoBehaviour
 						this.isOnGround = false;
 				}
 		}
-<<<<<<< HEAD
-
 		void moveRight ()
 		{
 				this.rigidbody2D.AddForce (Vector2.right * acceleration);
@@ -139,9 +133,6 @@ public class PlayerScript : MonoBehaviour
 						spriteRenderer.sprite = idlingLeftSprites [index];
 				}
 		}
-=======
-	
->>>>>>> origin/master
-		
+
 }
 	
