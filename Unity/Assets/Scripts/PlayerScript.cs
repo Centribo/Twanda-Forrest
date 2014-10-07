@@ -41,7 +41,6 @@ public class PlayerScript : MonoBehaviour
 								moveRight ();
 						} else if (playerOneLeft) {
 								//this.transform.Translate (-Vector2.right * speed * Time.deltaTime);
-
 								moveLeft ();
 						} else {
 								if (this.rigidbody2D.velocity.magnitude == 0) {
@@ -69,24 +68,26 @@ public class PlayerScript : MonoBehaviour
 						}
 						break;
 				}
+
 				if (this.rigidbody2D.velocity.x > maxSpeed) {
 						this.rigidbody2D.velocity = new Vector2 (maxSpeed, this.rigidbody2D.velocity.y);
 				} else if (this.rigidbody2D.velocity.x < -maxSpeed) {
 						this.rigidbody2D.velocity = new Vector2 (-maxSpeed, this.rigidbody2D.velocity.y);
 				}
 				
-				float distance = (this.GetComponent<BoxCollider2D> ().size.y * 0.5f * this.transform.localScale.x) + 0.016f;
-				Collider2D hit = Physics2D.OverlapPoint (new Vector2 (this.transform.position.x, this.transform.position.y - distance));
-				if (hit != null) {		
-						if (hit.transform.tag == "Platform" || hit.transform.name == "floor" || hit.transform.tag == "Door") {
-								this.isOnGround = true;
-						} else {
-								this.isOnGround = false;
-						}
+				float distance = (this.GetComponent<BoxCollider2D> ().size.y * 0.5f * this.transform.localScale.x) + 0.02f;
+				Collider2D[] hits = Physics2D.OverlapPointAll (new Vector2 (this.transform.position.x, this.transform.position.y - distance));
+				this.isOnGround = checkIfContainsJumpable (hits);		
+
+
+				/*if (hits.Length >= 2) {
+						this.isOnGround = true;
+				} else {
+						this.isOnGround = false;
 				}
 				//print (hit.tag);
 				//Debug.DrawRay (new Vector3 (0, 0, 0), new Vector3 (this.transform.position.x, this.transform.position.y - distance, 0));
-				/* Vector2 origin = (Vector2)this.transform.position + (-Vector2.up * distance);
+				 Vector2 origin = (Vector2)this.transform.position + (-Vector2.up * distance);
 				
 				RaycastHit2D hit = Physics2D.Raycast (origin, -Vector2.up, 0.01f);
 				Debug.DrawRay (origin, (-Vector2.up * 0.01f));
@@ -103,6 +104,16 @@ public class PlayerScript : MonoBehaviour
 						this.rigidbody2D.AddForce (new Vector2 (0, jumpForce));
 						this.isOnGround = false;
 				}
+		}
+		
+		bool checkIfContainsJumpable (Collider2D[] hits)
+		{
+				foreach (Collider2D c in hits) {
+						if (c.tag == "Platform" || c.tag == "floor" || c.tag == "Door") {
+								return true;
+						}
+				}
+				return false;
 		}
 
 		void moveRight ()
